@@ -22,29 +22,11 @@ namespace GuitarShop_001
         {
             List<Guitar> searchResults = new List<Guitar>();
             foreach (Guitar g in guitars) {
-                if (!searchGuitar.Model.ToUpper().Equals(g.guitarSpec.Model.ToUpper()) && !searchGuitar.Model.Equals("")
-                    && searchGuitar.Model != null)
+                // finish this part of the code
+                if (g.guitarSpec.matches(searchGuitar))
                 {
-                    continue;
+                    searchResults.Add(g);
                 }
-                if (!searchGuitar.GuitarType.Equals(g.guitarSpec.GuitarType) && !searchGuitar.GuitarType.Equals(""))
-                {
-                    continue;
-                }
-                if (!searchGuitar.BackWood.Equals(g.guitarSpec.BackWood) && !searchGuitar.BackWood.Equals(""))
-                {
-                    continue;
-                }
-
-                if (!searchGuitar.TopWood.Equals(g.guitarSpec.TopWood) && !searchGuitar.TopWood.Equals(""))
-                {
-                    continue;
-                }
-                if (!searchGuitar.GuitarBuilder.Equals(g.guitarSpec.GuitarBuilder) && !searchGuitar.GuitarBuilder.Equals(""))
-                {
-                    continue;
-                }
-                searchResults.Add(g);
             }
 
             return searchResults;

@@ -11,7 +11,7 @@ namespace GuitarShop_001
 
             initializeInventory(inventory);
 
-            GuitarSpec customerChoice = new GuitarSpec("Stratocaster", Type.ACOUSTIC, Wood.ROSEWOOD, Wood.MAPLE, Builder.FENDER);
+            GuitarSpec customerChoice = new GuitarSpec("stratocaster", Type.ACOUSTIC, Wood.ROSEWOOD, Wood.MAPLE, Builder.FENDER, 6);
 
             List<Guitar> results = inventory.search(customerChoice);
 
@@ -27,8 +27,8 @@ namespace GuitarShop_001
 
         public static void initializeInventory(Inventory inventory)
         {
-            inventory.addGuitar(new Guitar("A124", 569.99, new GuitarSpec("stratocaster", Type.ACOUSTIC, Wood.ROSEWOOD, Wood.MAPLE, Builder.FENDER)));
-            inventory.addGuitar(new Guitar("E456", 789.99, new GuitarSpec("telecaster", Type.ELECTRIC,  Wood.ALDER, Wood.MAHOGANY, Builder.MARTIN)));
+            inventory.addGuitar(new Guitar("A124", 569.99, new GuitarSpec("stratocaster", Type.ACOUSTIC, Wood.ROSEWOOD, Wood.MAPLE, Builder.FENDER, 6)));
+            inventory.addGuitar(new Guitar("E456", 789.99, new GuitarSpec("telecaster", Type.ELECTRIC,  Wood.ALDER, Wood.MAHOGANY, Builder.MARTIN, 12)));
         }
     }
 }
