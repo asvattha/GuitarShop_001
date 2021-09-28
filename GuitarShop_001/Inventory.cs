@@ -22,7 +22,6 @@ namespace GuitarShop_001
         {
             List<Guitar> searchResults = new List<Guitar>();
             foreach (Guitar g in guitars) {
-                // finish this part of the code
                 if (g.guitarSpec.matches(searchGuitar))
                 {
                     searchResults.Add(g);
