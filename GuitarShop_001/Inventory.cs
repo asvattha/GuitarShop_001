@@ -6,25 +6,25 @@ namespace GuitarShop_001
 {
     class Inventory
     {
-        List<Guitar> guitars;
+        List<Instrument> instruments;
 
         public Inventory()
         {
-            guitars = new List<Guitar>();
+            instruments = new List<Instrument>();
         }
 
-        public void addGuitar(Guitar g)
+        public void addInstrument(Instrument i)
         {
-            guitars.Add(g);
+            instruments.Add(i);
         }
 
-        public List<Guitar> search(GuitarSpec searchGuitar)
+        public List<Instrument> search(InstrumentSpec searchInstrument)
         {
-            List<Guitar> searchResults = new List<Guitar>();
-            foreach (Guitar g in guitars) {
-                if (g.guitarSpec.matches(searchGuitar))
+            List<Instrument> searchResults = new List<Instrument>();
+            foreach (Instrument i in instruments) {
+                if (i.Spec.matches(searchInstrument))
                 {
-                    searchResults.Add(g);
+                    searchResults.Add(i);
                 }
             }
 
